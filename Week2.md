@@ -15,7 +15,7 @@ In order to give a good estimate of the best integer solution, the open source s
 
 * Solve the problem in the continuous case
 * For this continuous solution, if there is some non-integer solution which should be an integer, then consider the two regions either side of the point, where we enforce this.
-(For example, $x = (2, 3.4, 5)$ becomes the two regions $x_2 \leq 3, x_2 \geq 4$)
+(For example, x = (2, 3.4, 5) becomes the two regions x_2 <= 3, x_2 >= 4\])
 * Consider the continuous solutions in each of these regions,  and split accordingly until the subset you are looking at is completely small
 
 There are 2 main problems that arrive at the moment:
