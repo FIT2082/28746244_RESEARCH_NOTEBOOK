@@ -1,6 +1,6 @@
 # Week 2
 
-This was the first week me and Time had the chance to meet Pierre - our supervisor for this project.
+This was the first week Tim and I had the chance to meet Pierre - our supervisor for this project.
 We were able to discuss the meat of the project, as well as goals for next week and the end of the project.
 
 ## What are we doing?
@@ -16,7 +16,7 @@ In order to give a good estimate of the best integer solution, the open source s
 * Solve the problem in the continuous case
 * For this continuous solution, if there is some non-integer solution which should be an integer, then consider the two regions either side of the point, where we enforce this.
 (For example, x = (2, 3.4, 5) becomes the two regions x_2 <= 3, x_2 >= 4\])
-* Consider the continuous solutions in each of these regions,  and split accordingly until the subset you are looking at is completely small
+* Consider the continuous solutions in each of these regions,  and split accordingly until the subset you are looking at is sufficiently small
 
 There are 2 main problems that arrive at the moment:
 
@@ -26,12 +26,12 @@ There are 2 main problems that arrive at the moment:
 The answers to which are:
 
 1. We calculate the upper bound of solutions in that area by solving the continuous version of the problem, and then choose those which give the "most distinct" split in bounds (The details of which are outside the scope of this project)
-2. While this is a problem, if we can reliably take away branches of a problem, then this wouldn't be a problem. Let's say we found an integer solution with value 5 at some branch of the problem - then every branch which had a maximum score of 5 or less can be discarded and thus not search!
+2. Let's say we found an integer solution with value 5 at some branch of the problem - then every branch which had a maximum score of 5 or less can be discarded and thus not search! As such we can remove many of the branches found by simply traversing the tree in a depth first search way.
 
-Normally, to get these upper bounds per area, the continuous problem is solved (In polynomial time), although once enough branches are made, the execution of this code adds up, and the current state of the art solution to this is to predict the next upper bounds on some variable split $x_k$ by looking at all previous splits on $x_k$ and their upper bounds.
+Normally, to get these upper bounds per area, the continuous problem is solved (In polynomial time), although once enough branches are made, the execution of this code adds up, and the current state of the art solution to this is to predict the next upper bounds on some variable split x by looking at all previous splits on x and their upper bounds.
 The current estimation method is a simple average over all previous cases, although Pierre thinks we can do better with a very lightweight machine learning algorithm.
 
-As such, this research project will include testing different lightweight machine leraning methods to be trained on the fly in order to increase the prediciton power of such upper bounds, leading to a hopeful increase in efficiency of the algorithm.
+As such, this research project will include testing different lightweight machine learning methods to be trained on the fly in order to increase the prediciton power of such upper bounds, leading to a hopeful increase in efficiency of the algorithm.
 
 ## Goals for next week
 
