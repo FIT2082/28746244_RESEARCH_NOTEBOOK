@@ -1,0 +1,8 @@
+## Week 11
+Now that Week 12 is looming near, we've sorted out a poster design, and are in talks with Pierre and Edward about what content should/should not be on the poster.
+While our first edit had lots of text, between now and week 12 we aim to finish all the required content and use more diagrams, and have more concise explanations.
+
+We also ran about 30 test instances, sadly all of which put SCIP's estimate above ours.
+After the week 12 meeting we aim to try training models on only data which pertains to the same variable, and see if this gives us better results.
+
+The aim for next week is to complete the poster and rehearse the 2 minute poster pitch.
